@@ -1,19 +1,20 @@
 import React from 'react';
 
-const PostAddForm = () => {
+const PostAddForm = ({onAdd}) => {
     return (
-        <form className="bottom-panael d-flex">
+        <div className="bottom-panael d-flex">
             <input
                 className="form-control new-post-label"
                 type="text"
                 placeholder="О чём вы думаете сейчас"
             />
             <button
+            onClick={() => onAdd('Hello world')}
                 type="submit"
                 className="btn btn-outline-secondary">
                 Добавить
             </button>
-        </form>
+        </div>
     )
 }
 
